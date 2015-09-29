@@ -95,7 +95,7 @@ module.exports = function (grunt) {
         open: {
             server: {
                 path: 'http://localhost:<%= connect.options.port %>',
-                app: 'Chrome'
+                app: 'Google Chrome'
             },
             test: {
                 path: 'http://localhost:<%= connect.test.options.port %>'

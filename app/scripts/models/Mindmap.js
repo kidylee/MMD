@@ -10,6 +10,8 @@ MMD.Models = MMD.Models || {};
         url: '',
 
         initialize: function() {
+            this.listenTo(MMD.Models.texteditor, 'change:text',this.update);
+            this.set('text','');
         },
 
         defaults: {
@@ -20,6 +22,10 @@ MMD.Models = MMD.Models || {};
 
         parse: function(response, options)  {
             return response;
+        },
+
+        update: function () {
+            this.set('text',MMD.Models.texteditor.get('text'));
         }
     });
 

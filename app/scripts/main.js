@@ -9,11 +9,11 @@ window.MMD = {
     init: function () {
         'use strict';
         console.log('Hello from Backbone!');
-        this.Models.texteditor = new MMD.Models.TextEditor;
+        this.Models.texteditor = new MMD.Models.TextEditor({'text':'###1'});
         this.Views.texteditor = new MMD.Views.TextEditor({model: this.Models.texteditor});
         this.Views.texteditor.render();
 
-        this.Models.mindmap = new MMD.Models.Mindmap;
+        this.Models.mindmap = new MMD.Models.Mindmap();
         this.Views.mindmap = new MMD.Views.Mindmap({model: this.Models.mindmap});
         this.Views.mindmap.render();
     }
@@ -22,4 +22,5 @@ window.MMD = {
 $(document).ready(function () {
     'use strict';
     MMD.init();
+    MMD.Models.texteditor.set('heads','texteditor');
 });

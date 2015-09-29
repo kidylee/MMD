@@ -11,7 +11,7 @@ MMD.Views = MMD.Views || {};
 
         el: '#mindMap',
 
-       
+
 
         events: {},
 
@@ -20,7 +20,6 @@ MMD.Views = MMD.Views || {};
         },
 
         render: function () {
-            console.log("POOP");
             this.$el.html(this.template(this.model.toJSON()));
         }
 
