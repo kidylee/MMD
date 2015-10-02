@@ -9,7 +9,7 @@ window.MMD = {
     init: function () {
         'use strict';
         console.log('Hello from Backbone!');
-        this.Models.texteditor = new MMD.Models.TextEditor({'text':'###1'});
+        this.Models.texteditor = new MMD.Models.TextEditor({'text':'<div>###1</div>'});
         this.Views.texteditor = new MMD.Views.TextEditor({model: this.Models.texteditor});
         this.Views.texteditor.render();
 
@@ -22,5 +22,4 @@ window.MMD = {
 $(document).ready(function () {
     'use strict';
     MMD.init();
-    MMD.Models.texteditor.set('heads','texteditor');
 });

@@ -12,7 +12,7 @@ MMD.Views = MMD.Views || {};
         el: '#textEditor',
 
         events: {
-            'input': 'keyAction'
+            'input': 'textChange'
         },
 
         initialize: function () {
@@ -25,9 +25,9 @@ MMD.Views = MMD.Views || {};
             return this;
         },
 
-        keyAction: function() {
-            // console.log(this.$el.html());
-            this.model.set('text',this.$el.html());
+        textChange: function() {
+            //performance improve for reduce unneccesary update
+            this.model.text = this.$el.html();
         },
 
 
